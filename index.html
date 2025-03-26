@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="./app.js" defer></script>
+
+</head>
+
+<body>
+
+  <div class="form-submit-message">
+    <div>
+      <img src="./assets/images/icon-success-check.svg" alt="success icon">
+      <h2>Message Sent!</h2>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+  <main>
+
+    <div class="form-container">
+      <h1>Contact Us</h1>
+
+      <form>
+        <div class="names mb-15">
+          <div class="pos-relative">
+            <label for="firstname">First Name <span>*</span></label>
+            <input type="text" name="firstname" id="firstname" class="mt-05 inputBorderErr" autocomplete="off">
+            <p class="err-txt namemail-err">This field is required</p>
+          </div>
+          <div class="pos-relative">
+            <label for="lastName">Last Name <span>*</span></label>
+            <input type="text" name="lastName" id="lastName" class="mt-05 inputBorderErr" autocomplete="off">
+            <p class="err-txt namemail-err">This field is required</p>
+          </div>
+        </div>
+
+        <div class="email mb-15 pos-relative">
+          <label for="email">Email Address <span>*</span></label>
+          <input type="email" name="email" id="email" class="mt-05 inputBorderErr" autocomplete="off">
+          <p class="err-txt namemail-err">Please enter a valid email address</p>
+        </div>
+
+        <div class="query-radio mb-15 pos-relative">
+          <p>Query Type <span>*</span></p>
+          <div class="radio-container-wrapper">
+            <div class="radio-container">
+              <input type="radio" name="queries" id="general">
+              <label for="general" class="radio-label">General Enquiry</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" name="queries" id="support">
+              <label for="support" class="radio-label">Support Request</label>
+            </div>
+          </div>
+          <p class="err-txt query-err">Please select a query type</p>
+        </div>
+
+        <div class="message pos-relative">
+          <label for="message">Message <span>*</span></label>
+          <textarea name="message" id="message" class="mt-05 inputBorderErr" autocomplete="off" rows="3"></textarea>
+          <p class="err-txt message-err">This field is required</p>
+        </div>
+
+        <div class="consent pos-relative">
+          <div>
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="checkbox">I consent to being contacted by the team <span>*</span></label>
+          </div>
+          <p class="err-txt consent-err">To submit this form, please consent to being contacted</p>
+        </div>
+
+        <button class="btn">Submit</button>
+      </form>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/riyad-96" target="_blank">Riyad</a>.</p>
+  </footer>
+
+</body>
+
+</html>

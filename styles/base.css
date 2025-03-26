@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Karla;
+  src: url('../assets/fonts/karla-v31-latin-700.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Karla;
+  src: url('../assets/fonts/karla-v31-latin-400.woff2') format('woff2');
+  font-weight: 400;
+}
+
+body{
+  font-family: Karla;
+  font-size: 1rem;
+}
+
+input,
+textarea,
+button{
+  font-size: 1rem;
+  font-family: Karla;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.names,
+.email,
+.message{
+  input{
+    inline-size: 100%;
+    min-inline-size: 0px;
+    outline: none;
+  }
+  textarea{
+    inline-size: 100%;
+    min-inline-size: 0px;
+    outline: none;
+  }
+}

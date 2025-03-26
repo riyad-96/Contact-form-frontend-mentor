@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+main{
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+
+  display: flex;
+  align-items: center;
+}
+
+.form-container {
+  max-inline-size: 735px;
+  margin-inline: auto;
+  max-block-size: fit-content;
+}
+
+@media(width < 501px) {
+  .names.names {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .radio-container-wrapper.radio-container-wrapper{
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,247 @@
+/* !  -------- basic styling  --------  */
+h1 {
+  margin: 0;
+}
+
+.form-container {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.names {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  >div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+}
+
+
+.names,
+.email {
+  input {
+    padding-block: 0.8rem;
+    padding-inline: 1.5rem;
+    border: 1px solid var(--input-border);
+    border-radius: 0.5rem;
+  }
+}
+
+span {
+  color: var(--green-600);
+}
+
+
+/* ! -------- radio styling -------- */
+.query-radio {
+  >div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.radio-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio-label {
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  padding-block: 0.8rem;
+  padding-inline-start: 3rem;
+  display: block;
+  cursor: pointer;
+  position: relative;
+
+  @media(width < 500px) {
+    cursor: default;
+  }
+}
+
+.radio-label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  block-size: 10px;
+  inline-size: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  outline: 1px solid #c4c4c4;
+  outline-offset: 3px;
+  opacity: 0.8;
+}
+
+input[type="radio"]:checked+.radio-label::before {
+  background-color: var(--green-600);
+  outline: 2px solid var(--green-600);
+}
+
+input[type="radio"]:checked+.radio-label {
+  background-color: var(--green-200);
+  border: 1px solid var(--green-600);
+}
+
+/* ! -------- textarea styling -------- */
+textarea {
+  resize: none;
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.consent>div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  input {
+    block-size: 1rem;
+    inline-size: 1rem;
+    accent-color: var(--green-600);
+    cursor: pointer;
+
+    @media(width < 500px) {
+      cursor: default;
+    }
+  }
+
+  label {
+    cursor: pointer;
+
+    @media(width < 500px) {
+      cursor: default;
+    }
+  }
+}
+
+
+.btn {
+  border: none;
+  display: block;
+  background-color: var(--green-600);
+  padding-block: 1rem;
+  font-weight: 700;
+  inline-size: 100%;
+  color: var(--white);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 150ms;
+
+  @media(width < 500px) {
+    cursor: default;
+  }
+
+  &:active{
+    transform: scale(0.99);
+  }
+}
+
+
+/* !  -------- hover & focus state styling --------  */
+
+.names,
+.email {
+
+  input:hover,
+  input:focus,
+  input:focus-visible {
+    border: 1px solid var(--green-600);
+  }
+}
+
+textarea:hover,
+textarea:focus,
+textarea:focus-visible {
+  border: 1px solid var(--green-600);
+}
+
+.btn:hover {
+  background-color: #063f36;
+}
+
+
+/*! form submit confirmation dialogue */
+.form-submit-message {
+  position: fixed;
+  top: -200px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  transition: 200ms;
+
+  inline-size: 100%;
+  max-inline-size: 450px;
+  background-color: var(--grey-900);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+  z-index: 99;
+
+  @media(width < 500px){
+    border-radius: initial;
+  }
+
+  >div {
+    display: flex;
+    gap: 1rem;
+    margin-block-end: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+
+
+/*! footer styling */
+footer{
+  padding-block: 5rem;
+  padding-inline: 1.5rem;
+  display: grid;
+  justify-content: center;
+
+  p{
+    max-inline-size: fit-content;
+    background-color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+
+  a{
+    color: var(--green-600);
+    font-weight: 700;
+    text-decoration: none;
+    text-underline-offset: 5px;
+    transition: 300ms;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+    text-underline-offset: 1px;
+  }
+}
